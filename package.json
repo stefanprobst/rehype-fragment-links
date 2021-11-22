@@ -1,0 +1,34 @@
+{
+  "name": "@stefanprobst/rehype-fragment-links",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "format": "prettier . --list-different --ignore-path .gitignore",
+    "format:fix": "yarn run format --write",
+    "prepublishOnly": "yarn run build"
+  },
+  "dependencies": {
+    "@types/hast": "^2.3.4",
+    "hast-util-heading": "^2.0.0",
+    "hast-util-is-element": "^2.1.1",
+    "hastscript": "^7.0.2",
+    "unified": "^10.1.1",
+    "unist-util-visit": "^4.1.0"
+  },
+  "devDependencies": {
+    "@stefanprobst/prettier-config": "^2.0.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.4"
+  },
+  "prettier": "@stefanprobst/prettier-config"
+}
