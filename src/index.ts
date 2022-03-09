@@ -23,7 +23,7 @@ function generateNodes(node: Hast.Element, id: string) {
  * @see https://github.com/rehypejs/rehype-autolink-headings
  */
 export default function withFragmentLinks(options: Options = {}): Transformer<Hast.Root> {
-  const is = convertElement(options.test) || heading
+  const is = options.test != null ? convertElement(options.test) : heading
   const generate = options.generate || generateNodes
 
   const transformer: Transformer<Hast.Root> = function transformer(tree, _file) {
