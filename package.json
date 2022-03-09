@@ -28,7 +28,7 @@
   "devDependencies": {
     "@stefanprobst/prettier-config": "^2.0.0",
     "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
+    "typescript": "^4.6.2"
   },
   "prettier": "@stefanprobst/prettier-config"
 }
